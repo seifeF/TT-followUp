@@ -1,0 +1,184 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 07, 2022 at 07:43 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `networkmoniter`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `branchs`
+--
+
+CREATE TABLE `branchs` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `lan` varchar(20) NOT NULL,
+  `wan` varchar(20) NOT NULL,
+  `sn` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `branchs`
+--
+
+INSERT INTO `branchs` (`id`, `name`, `lan`, `wan`, `sn`) VALUES
+(1, '22 MAZORIYA', '192.168.19.1', '10.130.199.244', '9990016446'),
+(2, '22-WUHALIMAT', '10.60.208.1/24', '10.130.228.116', '9990090721'),
+(3, 'ADEY ABEBA', '10.60.71.1', '10.151.206.92?', '9990076978'),
+(4, 'AIRPORT', '192.168.80.1', '10.130.210.204', '9990021714'),
+(5, 'AKAKI', '192.168.110.1', '10.151.201.156', '9990035949'),
+(6, 'AKAKI GEBEYA', '10.70.141.1/24', '10.151.226.84', '10100166520'),
+(7, 'AKAKI GELAN', '10.60.200.1', '10.151.208.20?', '9990082956'),
+(8, 'AKAKI KALITY', '10.60.197.1', '10.151.207.204', '9990081200'),
+(9, 'BESHALE FIGA', '10.60.222.1/24', '10.150.208.36', '57100011797'),
+(10, 'BOLE', '192.168.26.1', '10.130.200.124', '9990015882'),
+(11, 'BOLE 18', '10.80.9.1', '10.130.245.196', '73100633083'),
+(12, 'BOLE 22', '192.168.117.1', '10.130.210.156', '9990037154'),
+(13, 'BOLE 24', '192.168.131.1', '10.130.213.20', '9990041556'),
+(15, 'BOLE BULBULA', '10.60.245.1/24', '10.151.213.172?', '75100019815'),
+(16, 'BOLE MEDHANIALEM', '192.168.90.1', '10.130.204.188', '9990021092'),
+(17, 'BOLE MICHAEL', '192.168.74.1', '10.130.227.116', '9990019125'),
+(18, 'BOLE MICHAEL ADEABAY', '10.70.133.1/24', '10.151.201.204', '116392843'),
+(19, 'BOLE17', '10.60.202.1/24', '10.130.228.84', '9990089113'),
+(20, 'BULBULA 93 MAZORIA', '10.70.183.1', '10.151.231.36', '673112225'),
+(21, 'BURKA SHOBE', '10.70.239.1', '10.150.222.220', '75100580345'),
+(22, 'CAMEROON AVENUE', '10.70.151.1/24', '10.130.206.84', '0116662528/011666242'),
+(23, 'CMC', '192.168.103.1', '10.150.198.252', '9990029605'),
+(24, 'DUKEM', '10.1.72.1', '10.134.193.244', '9990009012'),
+(25, 'EDGET', '192.168.116.1', '10.145.201.156', '9990037029'),
+(26, 'GARA GURA', '10.80.11.1', '10.150.228.60', '78100661798'),
+(27, 'GELAN', '10.70.93.1/24', '10.151.222.60', '69100108889'),
+(28, 'GERJI', '192.168.30.1', '10.150.196.12', '9990019085'),
+(29, 'GERJI GIORGIS', '10.1.76.1', '10.150.195.52', '9990012884'),
+(30, 'GERJI MEBRAT HAILE', '10.70.243.1', '10.150.222.60', '59100606519'),
+(31, 'GORO BESHALE', '10.70.124.1/24', '10.150.202.60', '72100153892'),
+(32, 'GURD SHOLLA JAKROS', '10.60.231.1', '10.150.207.68', '9900016534'),
+(33, 'HARBU GUDO', '10.70.120.1/24', '10.150.216.84', '71100137721'),
+(34, 'HAYAT 49 MAZORIA', '10.70.186.1', '10.150.220.140', '19100277559'),
+(35, 'HAYAT ADEBABAY', '10.60.201.1', '10.150.205.20?', '9990087279'),
+(36, 'HAYAT ARABSA', '10.70.119.1/24', '10.130.250.44', '8.87789E+11'),
+(37, 'IMPERIAL AKABABI', '10.70.29.1/24', '10.130.238.140?', '71100039601'),
+(38, 'JACROS FIGA', '10.80.8.1', '10.150.210.12', '46100650566'),
+(39, 'JACKROS', '10.60.171.1', '10.150.203.188   ', '9990080392'),
+(40, 'JACROS ADEBABAY', '10.80.2.1', '10.150.194.44', '38100616668'),
+(41, 'KALITY GEBRIEL', '192.168.144.1', '10.151.204.236', '9990063228'),
+(42, 'KALITY GUMRUK', '192.168.122.1', '10.151.202.204', '9990040115'),
+(43, 'KILINTO', '10.70.176.1', '10.151.230.76?', '52100240762'),
+(44, 'KOKEB', '10.60.188.1', '10.130.228.108   ', '9990090228'),
+(45, 'KOREA HOSPITAL', '10.1.66.1', '10.150.208.92', '991000513'),
+(46, 'MEGENAGNA 22', '10.60.217.1/24', '10.130.230.228', '9990101680'),
+(47, 'MELKA SHENO', '10.70.90.1/24', '10.151.220.236', '939842178'),
+(48, 'MERI-SUMMIT', '10.70.244.1', '10.150.205.140', '55100616685'),
+(49, 'MILLENNIUM AKABABI', '10.60.185.1', '10.130.224.84', '9990080096'),
+(50, 'MOENCO', '10.60.186.1', '10.130.226.84', '9990083016'),
+(51, 'RWANDA EMBASSY AKABABI', '10.70.58.1/24', '10.130.198.124?', '18100062678'),
+(52, 'SALOGORA', '192.168.133.1', '10.151.203.116', '9990043775'),
+(53, 'SHALLA', '192.168.84.1', '10.130.205.116', '9990022826'),
+(54, 'SUMMIT', '10.70.44.1/24', '10.150.214.244', '81100048071'),
+(55, 'SUMMIT 72', '10.70.134.1', '10.130.240.116', '27100154297'),
+(56, 'TULU DIMTU', '10.70.174.1', '10.151.230.44?', '45100240755'),
+(57, 'WEJI', '10.80.16.1', '10.130.245.148', '88100684218'),
+(58, 'WOLLO SEFER', '10.60.246.1/24', '10.131.237.220?', '15100022305');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tt`
+--
+
+CREATE TABLE `tt` (
+  `id` int(11) NOT NULL,
+  `tt` varchar(20) NOT NULL,
+  `branch` int(11) NOT NULL,
+  `reg_date` int(11) NOT NULL,
+  `reg_by` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `res_date` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `userType` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `userType`) VALUES
+(1, 'seifef', '$2y$10$Hiilhtx4hE7hRWC7WXn3w.5x.L1iwr1U9Z3N70oqIms5M.KpMD1.O', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `branchs`
+--
+ALTER TABLE `branchs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tt`
+--
+ALTER TABLE `tt`
+  ADD PRIMARY KEY (`id`,`tt`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `branchs`
+--
+ALTER TABLE `branchs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
+--
+-- AUTO_INCREMENT for table `tt`
+--
+ALTER TABLE `tt`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
